@@ -5,6 +5,8 @@
  */
 package singleton;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author AJuda
@@ -15,17 +17,14 @@ public class Singleton {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+               
+        ArrayList<ApplicationOfSingleton> applicationList = new ArrayList<>();
         
-        ApplicationOfSingleton[] application= new ApplicationOfSingleton[3];
+        applicationList.add(ApplicationOfSingleton.getApplication());
+        applicationList.add(ApplicationOfSingleton.getApplication());
+        applicationList.add(ApplicationOfSingleton.getApplication());
         
-        application[0]=ApplicationOfSingleton.getApplication();
-        application[1]=ApplicationOfSingleton.getApplication();
-        application[2]=ApplicationOfSingleton.getApplication();
-        
-        for (ApplicationOfSingleton val: application)
-        {
-            val.showValue();
-        }
+        applicationList.forEach(System.out::println);
     }
     
 }

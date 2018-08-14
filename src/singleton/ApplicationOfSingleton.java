@@ -32,5 +32,12 @@ public class ApplicationOfSingleton {
     {
         System.out.println("Value: " + value);
     }
+
+    @Override
+    public String toString() {
+        return "Value: " + value;
+    }
+    
+    
     
 }
